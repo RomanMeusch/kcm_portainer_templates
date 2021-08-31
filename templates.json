@@ -13,7 +13,7 @@
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
 			"repository": {
 				"url": "https://github.com/RomanMeusch/kcm_portainer_templates",
-				"stackfile": "wordpress/stack.yml"
+				"stackfile": "wordpress.yml"
 			},
 			"env": [
 				{
