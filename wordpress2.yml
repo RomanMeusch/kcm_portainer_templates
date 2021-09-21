@@ -6,7 +6,7 @@ services:
     volumes:
       - 'db_data:/var/lib/mysql'
     environment:
-      MYSQL_ROOT_PASSWORD: '${ADMIN_PASSWORD}'
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
@@ -43,9 +43,6 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
       PORT: ${PORT}
       TITLE: ${TITLE}
-      ADMIN_USER: ${ADMIN_USER}
-      ADMIN_EMAIL: ${ADMIN_EMAIL}
-      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
 
 volumes:
   db_data:
