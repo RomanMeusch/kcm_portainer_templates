@@ -46,7 +46,7 @@ services:
     entrypoint: ["/bin/sh", "-c"]
     command:
       - |
-        wp core install --url=http://kcm.cubicsampler.com:${PORT} --title="${TITLE}" --admin_user="${ADMIN_USER}" --admin_email="${ADMIN_EMAIL}" --admin_password="${ADMIN_PASSWORD}" --allow-root
+        wp core install --url=http://kcm.cubicsampler.com:${PORT} "--title=${TITLE}" "--admin_user=${ADMIN_USER}" "--admin_email=${ADMIN_EMAIL}" "--admin_password=${ADMIN_PASSWORD}" --allow-root
         wp plugin install elementor --activate --allow-root
 
 volumes:
