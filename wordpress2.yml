@@ -26,7 +26,7 @@ services:
 
   wp_install_elementor:
     image: 'wordpress:cli'
-    restart: no
+    restart: 'no'
     depends_on:
       - 'db'
       - 'wordpress'
