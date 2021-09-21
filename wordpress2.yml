@@ -11,6 +11,11 @@ services:
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
+    healthcheck:
+      test: /usr/bin/mysql --host=127.0.0.1 --user=wordpress --password=wordpress --silent --execute \"SELECT 1;\"
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   wordpress:
     image: 'kcm/wordpress:latest'
@@ -28,8 +33,10 @@ services:
     image: 'wordpress:cli'
     restart: 'no'
     depends_on:
-      - 'db'
-      - 'wordpress'
+      db:
+        condition: service_healthy
+      wordpress:
+        condition: service_started
     volumes:
       - 'wordpress_data:/var/www/html'
     environment:
