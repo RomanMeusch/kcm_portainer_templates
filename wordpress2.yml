@@ -35,7 +35,7 @@ services:
     deploy:
       mode: 'global'
       restart_policy:
-        condition: 'no'
+        condition: 'none'
     depends_on:
       - 'db'
       - 'wordpress'
