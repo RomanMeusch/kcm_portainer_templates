@@ -30,7 +30,7 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
 
   wp_setup:
-    image: 'wordpress:cli'
+    image: 'kcm/wordpress-cli:latest'
     restart: 'no'
     depends_on:
       - 'db'
