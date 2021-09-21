@@ -40,19 +40,19 @@
 			"env": [
 				{
 					"name": "WORDPRESS_PORT",
-					"label": "Exposed Port",
+					"label": "Exposed Port"
 				},
 				{
 					"name": "WORDPRESS_TITLE",
-					"label": "Website Title",
+					"label": "Website Title"
 				},
 				{
 					"name": "WORDPRESS_ADMIN_USER",
-					"label": "Admin User",
+					"label": "Admin User"
 				},
 				{
 					"name": "WORDPRESS_ADMIN_EMAIL",
-					"label": "Admin E-Mail",
+					"label": "Admin E-Mail"
 				},
 				{
 					"name": "MYSQL_DATABASE_PASSWORD",
