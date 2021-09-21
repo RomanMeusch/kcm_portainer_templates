@@ -40,7 +40,8 @@
 			"env": [
 				{
 					"name": "PORT",
-					"label": "Exposed Port"
+					"label": "Exposed Port",
+					"description": "Der Port, an dem die Website erreichbar ist. Am besten fünfstellig. Beispie: 30000 würde die Website erreichbar machen unter kcm.cubicsampler.com:30000."
 				},
 				{
 					"name": "TITLE",
