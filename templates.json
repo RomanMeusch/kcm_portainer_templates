@@ -22,6 +22,28 @@
 					"description": "Password used by the MySQL root user."
 				}
 			]
+		},
+		{
+			"type": 3,
+			"title": "Wordpress (Work in Progress)",
+			"description": "Wordpress setup with a MySQL database",
+			"note": "Deploys a Wordpress instance connected to a MySQL database.",
+			"categories": [
+				"CMS"
+			],
+			"platform": "linux",
+			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
+			"repository": {
+				"url": "https://github.com/RomanMeusch/kcm_portainer_templates",
+				"stackfile": "wordpress2.yml"
+			},
+			"env": [
+				{
+					"name": "MYSQL_DATABASE_PASSWORD",
+					"label": "Database root password",
+					"description": "Password used by the MySQL root user."
+				}
+			]
 		}
 	]
 }
