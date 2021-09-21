@@ -41,6 +41,7 @@ services:
       WORDPRESS_DB_HOST: 'db:3306'
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
+    entrypoint: ["/bin/sh", "-c"]
     command:
       - |
         wp core install --url=http://kcm.cubicsampler.com:${WORDPRESS_PORT} --title="${WORDPRESS_TITLE}" --admin_user="${WORDPRESS_ADMIN_USER}" --admin_email="${WORDPRESS_ADMIN_EMAIL}"
