@@ -46,18 +46,6 @@
 				{
 					"name": "TITLE",
 					"label": "Website Title"
-				},
-				{
-					"name": "ADMIN_USER",
-					"label": "Admin User"
-				},
-				{
-					"name": "ADMIN_EMAIL",
-					"label": "Admin E-Mail"
-				},
-				{
-					"name": "ADMIN_PASSWORD",
-					"label": "Admin Password"
 				}
 			]
 		}
