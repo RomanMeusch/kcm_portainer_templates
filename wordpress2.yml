@@ -7,12 +7,12 @@ services:
       - 'db_data:/var/lib/mysql'
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: '${MYSQL_DATABASE_PASSWORD}'
+      MYSQL_ROOT_PASSWORD: '${ADMIN_PASSWORD}'
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
     healthcheck:
-      test: "/usr/bin/mysql --host=127.0.0.1 --user=root --password=${MYSQL_DATABASE_PASSWORD} --silent --execute \"SHOW DATABASES;\""
+      test: "/usr/bin/mysql --host=127.0.0.1 --user=root --password=${ADMIN_PASSWORD} --silent --execute \"SHOW DATABASES;\""
       interval: 30s
       timeout: 10s
       retries: 5
@@ -20,7 +20,7 @@ services:
   wordpress:
     image: 'kcm/wordpress:latest'
     ports:
-      - '${WORDPRESS_PORT}:80'
+      - '${PORT}:80'
     volumes:
       - 'wordpress_data:/var/www/html'
     restart: always
@@ -32,6 +32,7 @@ services:
   wp_setup:
     image: 'kcm/wordpress-cli:latest'
     restart: 'no'
+    mode: 'global-job'
     depends_on:
       - 'db'
       - 'wordpress'
@@ -44,7 +45,7 @@ services:
     entrypoint: ["/bin/sh", "-c"]
     command:
       - |
-        wp core install --url=http://kcm.cubicsampler.com:${WORDPRESS_PORT} --title="${WORDPRESS_TITLE}" --admin_user="${WORDPRESS_ADMIN_USER}" --admin_email="${WORDPRESS_ADMIN_EMAIL}" --allow-root
+        wp core install --url=http://kcm.cubicsampler.com:${PORT} --title="${TITLE}" --admin_user="${ADMIN_USER}" --admin_email="${ADMIN_EMAIL}" --admin_password="${ADMIN_PASSWORD}" --allow-root
         wp plugin install elementor --activate --allow-root
 
 volumes:

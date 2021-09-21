@@ -39,29 +39,24 @@
 			},
 			"env": [
 				{
-					"name": "WORDPRESS_PORT",
-					"label": "Exposed Port",
-					"description": "Exposed Port"
+					"name": "PORT",
+					"label": "Exposed Port"
 				},
 				{
-					"name": "WORDPRESS_TITLE",
-					"label": "Website Title",
-					"description": "Website Title"
+					"name": "TITLE",
+					"label": "Website Title"
 				},
 				{
-					"name": "WORDPRESS_ADMIN_USER",
-					"label": "Admin User",
-					"description": "Admin User"
+					"name": "ADMIN_USER",
+					"label": "Admin User"
 				},
 				{
-					"name": "WORDPRESS_ADMIN_EMAIL",
-					"label": "Admin E-Mail",
-					"description": "Admin E-Mail"
+					"name": "ADMIN_EMAIL",
+					"label": "Admin E-Mail"
 				},
 				{
-					"name": "MYSQL_DATABASE_PASSWORD",
-					"label": "Database root password",
-					"description": "Password used by the MySQL root user."
+					"name": "ADMIN_PASSWORD",
+					"label": "Admin Password"
 				}
 			]
 		}
