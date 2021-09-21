@@ -24,7 +24,7 @@
 			]
 		},
 		{
-			"type": 3,
+			"type": 2,
 			"title": "Wordpress (Work in Progress)",
 			"description": "Wordpress setup with a MySQL database",
 			"note": "Deploys a Wordpress instance connected to a MySQL database.",
