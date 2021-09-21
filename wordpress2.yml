@@ -32,7 +32,6 @@ services:
   wp_setup:
     image: 'kcm/wordpress-cli:latest'
     deploy:
-      mode: 'global'
       restart_policy:
         condition: 'on-failure'
     depends_on:
