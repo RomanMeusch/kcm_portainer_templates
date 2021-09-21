@@ -33,7 +33,9 @@ services:
     image: 'kcm/wordpress-cli:latest'
     restart: 'no'
     deploy:
-      mode: 'global-job'
+      mode: 'global'
+      restart_policy:
+        condition: 'no'
     depends_on:
       - 'db'
       - 'wordpress'
