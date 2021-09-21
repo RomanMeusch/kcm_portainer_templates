@@ -31,11 +31,10 @@ services:
 
   wp_setup:
     image: 'kcm/wordpress-cli:latest'
-    restart: 'no'
     deploy:
       mode: 'global'
       restart_policy:
-        condition: 'none'
+        condition: 'on-failure'
     depends_on:
       - 'db'
       - 'wordpress'
